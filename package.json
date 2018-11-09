@@ -1,7 +1,13 @@
 {
   "name": "drummer-app",
   "version": "0.1.0",
+  "license": "GPL-3.0-or-later",
   "private": true,
+  "homepage": "https://github.com/simduchaine/DrumSensor-Vuejs-App#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/simduchaine/DrumSensor-Vuejs-App.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -76,7 +76,7 @@ export default {
     serialData (data) {
       let randomPad = function (min, max) { min = Math.ceil(min); max = Math.floor(max); return Math.floor(Math.random() * (max - min + 1)) + min; }
       let buffer = JSON.parse(data)
-      this.pad.selectedPad = randomPad(1, 9) // buffer.data[1]
+      this.pad.selectedPad = 8 // buffer.data[1] randomPad(1, 9)
       this.pad.intensity = buffer.data[2]
       this.pad.strokeType = buffer.data[3]
     }

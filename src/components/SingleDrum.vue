@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Pizzicato from 'pizzicato'
+import Wad from 'web-audio-daw'
 
 export default {
   props: ['drum', 'pad'],
@@ -19,12 +19,9 @@ export default {
   },
   methods: {
     initSound () {
-      this.sound = new Pizzicato.Sound({
-        source: 'file',
-        options: {
-          path: [this.drum.sound],
+      this.sound = new Wad({
+        source: [this.drum.sound],
           volume: 0.7
-        }
       })
     },
     playSound () {
@@ -34,8 +31,9 @@ export default {
       this.$emit('selected', drum)
     },
     playOnTap () {
-      this.sound.volume = (this.pad.intensity) / 200
-      this.sound.play()
+      this.sound.play({
+        //volume: (this.pad.intensity) / 200
+        })
     }
   },
   watch: {

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { Howl, Howler } from 'howler'
+import Pizzicato from 'pizzicato'
 
 export default {
   props: ['drum', 'pad'],
@@ -19,10 +19,12 @@ export default {
   },
   methods: {
     initSound () {
-      this.sound = new Howl({
-        src: [this.drum.sound],
-        volume: 0.7,
-        preload: true
+      this.sound = new Pizzicato.Sound({
+        source: 'file',
+        options: {
+          path: [this.drum.sound],
+          volume: 0.7
+        }
       })
     },
     playSound () {
@@ -32,7 +34,7 @@ export default {
       this.$emit('selected', drum)
     },
     playOnTap () {
-      this.sound.volume((this.pad.intensity) / 200)
+      this.sound.volume = (this.pad.intensity) / 200
       this.sound.play()
     }
   },

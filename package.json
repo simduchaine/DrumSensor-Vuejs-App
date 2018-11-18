@@ -5,8 +5,8 @@
   "private": true,
   "homepage": "https://github.com/simduchaine/DrumSensor-Vuejs-App#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/simduchaine/DrumSensor-Vuejs-App.git"
+    "type": "git",
+    "url": "https://github.com/simduchaine/DrumSensor-Vuejs-App.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "howler": "^2.0.15",
+    "pizzicato": "^0.6.4",
     "serialport": "^7.0.2",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
